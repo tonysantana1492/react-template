@@ -28,6 +28,7 @@ export const protectedRoutes = [
 	{
 		path: '/app',
 		element: <App />,
+	
 		children: [
 			{ path: 'mail', element: <Mail /> },
 			{ path: '', element: <Dashboard /> },

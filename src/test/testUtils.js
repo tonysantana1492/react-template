@@ -32,11 +32,11 @@ import { setupStore } from 'store';
 // 	return refObj;
 // }
 
-export function renderWithProviders(
+export const renderWithProviders = (
 	ui,
 	{ preloadedState = {}, store = setupStore(preloadedState), ...renderOptions } = {},
-) {
-	function Wrapper({ children }) {
+) => {
+	const Wrapper = ({ children }) => {
 		return (
 			<HelmetProvider>
 				<Provider store={store}>
